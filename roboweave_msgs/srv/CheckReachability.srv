@@ -1,0 +1,15 @@
+# Target end-effector pose in base_link frame
+geometry_msgs/Pose target_pose
+# Arm identifier
+string arm_id
+# Current joint state (for seed)
+float64[] current_joint_state
+---
+# Reachability result
+ReachabilityResult result
+# Whether the service call succeeded
+bool success
+# Error code if not successful
+string error_code
+# Human-readable message
+string message

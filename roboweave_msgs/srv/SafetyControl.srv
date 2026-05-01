@@ -1,0 +1,12 @@
+# Action: "emergency_stop" | "release_stop" | "enter_safe_mode"
+#   | "set_speed_limit" | "set_force_limit" | "set_workspace"
+string action
+# Operator ID for audit trail (required for release_stop)
+string operator_id
+# Additional parameters as JSON
+string params_json
+---
+# Whether the command succeeded
+bool success
+# Human-readable message
+string message

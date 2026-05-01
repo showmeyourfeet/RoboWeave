@@ -1,0 +1,19 @@
+# Gripper identifier (e.g. "left_gripper")
+string gripper_id
+# Action: "open" | "close" | "move_to_width"
+string action
+# Target width in meters (used with "move_to_width")
+float64 width
+# Grip force in Newtons
+float64 force
+# Movement speed (0.0-1.0 normalized)
+float64 speed
+---
+# Whether the command succeeded
+bool success
+# Achieved gripper width in meters
+float64 achieved_width
+# Error code if not successful (e.g. "CTL_GRIPPER_FAILED")
+string error_code
+# Human-readable message
+string message

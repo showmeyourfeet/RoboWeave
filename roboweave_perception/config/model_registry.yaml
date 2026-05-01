@@ -1,0 +1,13 @@
+backends:
+  detector:
+    active: "mock"
+    params: {}
+  segmentor:
+    active: "mock"
+    params: {}
+  point_cloud_builder:
+    active: "simple"
+    params: {}
+  pose_estimator:
+    active: "mock"
+    params: {}

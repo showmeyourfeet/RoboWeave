@@ -1,0 +1,16 @@
+# Base directory for episode data
+storage_path: "/data/roboweave/episodes"
+
+# Frame capture rate in Hz
+frame_rate_hz: 10.0
+
+# Automatically start/stop episodes from TaskStatus messages
+auto_record: true
+
+# Maximum episodes to retain on disk (0 = unlimited)
+max_episodes: 100
+
+# Failure mining thresholds
+mask_confidence_threshold: 0.5
+tracking_error_threshold: 0.05
+vla_confidence_threshold: 0.3

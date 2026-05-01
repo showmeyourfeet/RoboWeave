@@ -1,0 +1,21 @@
+# Default control frequency for VLA skills (Hz)
+default_control_frequency_hz: 10.0
+
+# Default safety constraints
+default_safety_constraints:
+  max_velocity: 0.25
+  max_angular_velocity: 0.5
+  force_limit: 20.0
+  torque_limit: 10.0
+  workspace_limit_id: ""
+  max_duration_sec: 60.0
+  allow_contact: false
+  min_confidence_threshold: 0.3
+
+# VLAMonitor thresholds
+monitor:
+  consecutive_low_confidence_limit: 3
+  max_rejection_count: 5
+
+# Safety filter service name
+safety_filter_service: "/roboweave/safety/filter_vla_action"

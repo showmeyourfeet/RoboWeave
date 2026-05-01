@@ -1,0 +1,9 @@
+# Category filter: "perception" | "planning" | "vla" | "control" | "composite" | "" (all)
+string category_filter
+---
+# Names of matching skills
+string[] skill_names
+# SkillDescriptor JSON for each skill (JsonEnvelope format)
+string[] skill_descriptors_json
+# Whether the query succeeded
+bool success

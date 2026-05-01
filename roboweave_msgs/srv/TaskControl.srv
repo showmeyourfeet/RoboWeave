@@ -1,0 +1,9 @@
+# Task identifier
+string task_id
+# Action: "pause" | "resume" | "cancel"
+string action
+---
+# Whether the action succeeded
+bool success
+# Human-readable message
+string message

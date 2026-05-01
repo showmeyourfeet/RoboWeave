@@ -1,0 +1,17 @@
+# Joint state to check
+float64[] joint_state
+# Arm identifier
+string arm_id
+# Object IDs to exclude from collision checking
+string[] ignore_objects
+---
+# Whether the configuration is in collision
+bool in_collision
+# List of collision pairs found
+CollisionPair[] collision_pairs
+# Whether the service call succeeded
+bool success
+# Error code if not successful
+string error_code
+# Human-readable message
+string message

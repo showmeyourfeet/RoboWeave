@@ -1,0 +1,19 @@
+# Object ID
+string object_id
+# Reference to the object's point cloud
+PointCloudRef point_cloud_ref
+# Estimation method: "icp" | "feature_matching" | "learned"
+string method
+---
+# Estimated pose with header (frame_id + timestamp)
+geometry_msgs/PoseStamped pose
+# Estimation confidence [0.0, 1.0]
+float64 confidence
+# 6x6 pose covariance (row-major, 36 elements)
+float64[] covariance
+# Whether the service call succeeded
+bool success
+# Error code if not successful (e.g. "PER_POSE_ESTIMATION_FAILED")
+string error_code
+# Human-readable message
+string message

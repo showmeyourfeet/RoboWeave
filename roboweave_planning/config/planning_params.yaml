@@ -1,0 +1,7 @@
+planning:
+  max_planning_time_ms: 5000
+  default_velocity_scaling: 0.5
+  default_acceleration_scaling: 0.5
+  min_trajectory_points: 10
+  max_grasp_candidates: 5
+  max_joint_velocity: 1.5

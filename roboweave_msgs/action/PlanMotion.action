@@ -1,0 +1,35 @@
+# Goal
+# Arm identifier (e.g. "left_arm")
+string arm_id
+# Target end-effector pose in base_link frame (zero pose = use goal_joint_state instead)
+geometry_msgs/Pose goal_pose
+# Target joint configuration (empty = use goal_pose instead)
+float64[] goal_joint_state
+# Planning mode: "joint_space" | "cartesian" | "cartesian_linear"
+string planning_mode
+# Velocity scaling factor [0.0, 1.0]
+float64 max_velocity_scaling
+# Acceleration scaling factor [0.0, 1.0]
+float64 max_acceleration_scaling
+# Object IDs to exclude from collision checking
+string[] ignore_collision_objects
+# Maximum planning time in milliseconds
+int32 max_planning_time_ms
+---
+# Result
+# Planned joint trajectory
+trajectory_msgs/JointTrajectory trajectory
+# Total trajectory duration in seconds
+float64 duration_sec
+# Whether the trajectory is collision-free
+bool collision_free
+# Failure code if planning failed (e.g. "MOT_PLANNING_FAILED")
+string failure_code
+# Human-readable message
+string message
+---
+# Feedback
+# Current planning status: "sampling" | "optimizing" | "validating" | "complete"
+string status
+# Planning progress [0.0, 1.0]
+float64 progress

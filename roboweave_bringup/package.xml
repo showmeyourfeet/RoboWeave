@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>roboweave_bringup</name>
+  <version>0.1.0</version>
+  <description>System launch files for RoboWeave</description>
+  <maintainer email="dev@roboweave.dev">RoboWeave Team</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>roboweave_control</exec_depend>
+  <exec_depend>roboweave_safety</exec_depend>
+  <exec_depend>roboweave_runtime</exec_depend>
+  <exec_depend>roboweave_perception</exec_depend>
+  <exec_depend>roboweave_planning</exec_depend>
+  <exec_depend>roboweave_vla</exec_depend>
+  <exec_depend>roboweave_data</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

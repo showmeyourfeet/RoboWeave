@@ -1,0 +1,15 @@
+# VLAAction serialized as JSON (JsonEnvelope format)
+string vla_action_json
+# VLASafetyConstraints serialized as JSON (JsonEnvelope format)
+string safety_constraints_json
+# Arm identifier
+string arm_id
+---
+# Whether the action is approved
+bool approved
+# Filtered/clamped action as JSON (JsonEnvelope format); empty if rejected
+string filtered_action_json
+# Rejection reason (empty if approved)
+string rejection_reason
+# Violation type (e.g. "workspace_violation", "velocity_exceeded"); empty if approved
+string violation_type

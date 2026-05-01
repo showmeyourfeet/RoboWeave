@@ -1,0 +1,27 @@
+# Goal
+# Arm identifier
+string arm_id
+# Joint trajectory to execute
+trajectory_msgs/JointTrajectory trajectory
+# Velocity scaling factor [0.0, 1.0]
+float64 velocity_scaling
+# Whether to monitor contact forces during execution
+bool monitor_force
+---
+# Result
+# Whether execution completed successfully
+bool success
+# Error code if not successful (e.g. "CTL_TRACKING_ERROR", "CTL_FORCE_EXCEEDED")
+string error_code
+# Human-readable message
+string message
+# Maximum tracking error observed during execution (radians)
+float64 max_tracking_error
+---
+# Feedback
+# Execution progress [0.0, 1.0]
+float64 progress
+# Current tracking error (radians)
+float64 tracking_error
+# Current joint positions
+float64[] current_joint_positions

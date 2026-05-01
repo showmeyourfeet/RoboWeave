@@ -1,0 +1,11 @@
+# Update type: "object_added" | "object_updated" | "object_removed" | "full_refresh"
+string update_type
+# Object ID affected (empty for full_refresh)
+string object_id
+# Update payload as JSON (JsonEnvelope format)
+string payload_json
+---
+# Whether the update was applied
+bool success
+# Human-readable message
+string message

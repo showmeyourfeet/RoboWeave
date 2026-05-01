@@ -1,0 +1,10 @@
+gripper_id: "parallel_gripper"
+name: "Parallel Gripper"
+type: "parallel"
+attached_to_arm: "left_arm"
+min_width: 0.0
+max_width: 0.08
+max_force: 20.0
+driver_type: "sim"
+driver_config:
+  gripper_speed: 0.1

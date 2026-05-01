@@ -1,0 +1,6 @@
+# (empty request)
+---
+# SystemVersions as JSON (JsonEnvelope format)
+string versions_json
+# Whether the query succeeded
+bool success

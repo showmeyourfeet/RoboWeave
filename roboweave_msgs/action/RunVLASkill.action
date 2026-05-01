@@ -1,0 +1,34 @@
+# Goal
+# VLA skill name
+string skill_name
+# Natural language instruction
+string instruction
+# Arm identifier
+string arm_id
+# Safety constraints for this execution
+VLASafetyConstraints safety_constraints
+# Maximum number of VLA steps (0 = unlimited)
+int32 max_steps
+# Timeout in seconds (0.0 = use default from safety_constraints)
+float64 timeout_sec
+---
+# Result
+# Execution status: "success" | "failed" | "timeout" | "cancelled" | "safety_stop"
+string status
+# Failure code if not successful (e.g. "VLA_CONFIDENCE_LOW")
+string failure_code
+# Human-readable message
+string message
+# Number of VLA steps executed
+int32 steps_executed
+---
+# Feedback
+# Current step number
+int32 current_step
+# VLA confidence for the current step [0.0, 1.0]
+float64 confidence
+# Current action type: "delta_eef_pose" | "target_eef_pose" | "joint_delta"
+#   | "gripper_command" | "skill_subgoal"
+string action_type
+# Current step status: "predicting" | "filtering" | "executing" | "verifying"
+string status

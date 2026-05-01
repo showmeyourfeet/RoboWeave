@@ -1,0 +1,13 @@
+# Task identifier
+string task_id
+# Failure code (e.g. "PER_NO_OBJECT_FOUND")
+string failure_code
+# Additional context as JSON (JsonEnvelope format)
+string context_json
+---
+# Recovery action as JSON (RecoveryAction, JsonEnvelope format)
+string recovery_action_json
+# Whether a recovery action was found
+bool success
+# Human-readable message
+string message

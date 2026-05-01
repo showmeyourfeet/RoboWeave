@@ -1,0 +1,24 @@
+# RoboWeave System Parameters
+system:
+  name: "RoboWeave"
+  version: "0.1.0"
+  profile: "sim"
+  log_level: "INFO"
+  coordinate_frame: "base_link"
+
+cloud:
+  enabled: false
+  grpc_address: "localhost:50051"
+  timeout_sec: 10.0
+  fallback_to_local: true
+
+runtime:
+  tick_rate_hz: 10.0
+  world_state_publish_rate_hz: 1.0
+  max_concurrent_skills: 2
+
+data:
+  enabled: true
+  auto_record: true
+  storage_path: "/tmp/roboweave/episodes"
+  max_storage_gb: 10

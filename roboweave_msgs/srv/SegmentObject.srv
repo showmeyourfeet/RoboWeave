@@ -1,0 +1,17 @@
+# Object ID to segment
+string object_id
+# Camera identifier
+string camera_id
+# Reference to the RGB image
+ImageRef rgb_ref
+# Reference to the depth image
+DepthRef depth_ref
+---
+# Reference to the generated segmentation mask
+MaskRef mask_ref
+# Whether the service call succeeded
+bool success
+# Error code if not successful (e.g. "PER_SEGMENTATION_FAILED")
+string error_code
+# Human-readable message
+string message

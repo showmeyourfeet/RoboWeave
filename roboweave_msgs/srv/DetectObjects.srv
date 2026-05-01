@@ -1,0 +1,17 @@
+# Query string describing what to detect (e.g. "red cup", "all objects")
+string query
+# Camera identifier (e.g. "head_camera")
+string camera_id
+# Reference to the RGB image to process
+ImageRef rgb_ref
+# Minimum detection confidence threshold [0.0, 1.0]
+float64 confidence_threshold
+---
+# Array of detection results
+Detection[] detections
+# Whether the service call succeeded
+bool success
+# Error code if not successful (e.g. "PER_DETECTION_FAILED")
+string error_code
+# Human-readable message
+string message

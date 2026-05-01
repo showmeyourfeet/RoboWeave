@@ -1,0 +1,9 @@
+# Task identifier
+string task_id
+# PlanGraph serialized as JSON (JsonEnvelope format)
+string plan_json
+---
+# Whether the plan was accepted
+bool accepted
+# Human-readable message
+string message

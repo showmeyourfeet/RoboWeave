@@ -1,0 +1,10 @@
+safety:
+  max_joint_velocity: [2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0]  # rad/s per joint
+  max_eef_velocity: 1.0          # m/s
+  max_eef_angular_velocity: 2.0  # rad/s
+  force_limit: 50.0              # N
+  torque_limit: 20.0             # Nm
+  min_human_distance: 0.3        # m
+  enable_self_collision_check: true
+  enable_environment_collision_check: true
+  cloud_disconnect_timeout_sec: 30.0

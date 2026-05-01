@@ -1,0 +1,17 @@
+# Object ID to grasp
+string object_id
+# Reference to the object's point cloud
+PointCloudRef point_cloud_ref
+# Grasp planning constraints
+GraspConstraints constraints
+# Arm to use for grasping (e.g. "left_arm")
+string arm_id
+---
+# Ranked list of grasp candidates
+GraspCandidate[] candidates
+# Whether the service call succeeded
+bool success
+# Error code if not successful (e.g. "GRP_NO_GRASP_FOUND")
+string error_code
+# Human-readable message
+string message

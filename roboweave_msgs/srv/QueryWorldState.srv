@@ -1,0 +1,11 @@
+# Query type: "full" | "object" | "robot" | "environment"
+string query_type
+# Object ID to query (used when query_type is "object")
+string object_id
+---
+# Query result as JSON (JsonEnvelope format)
+string result_json
+# Whether the query succeeded
+bool success
+# Human-readable message
+string message

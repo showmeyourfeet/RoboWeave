@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  roboweave-dev:
+    build:
+      context: ../..
+      dockerfile: tools/docker/Dockerfile
+    container_name: roboweave-dev
+    volumes:
+      - ../..:/roboweave_ws
+    network_mode: host
+    stdin_open: true
+    tty: true
+    environment:
+      - ROS_DOMAIN_ID=42

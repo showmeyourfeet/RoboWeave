@@ -1,0 +1,9 @@
+# Skill name to check
+string skill_name
+---
+# Health status: "healthy" | "degraded" | "unavailable"
+string status
+# Diagnostics as JSON
+string diagnostics_json
+# Whether the query succeeded
+bool success

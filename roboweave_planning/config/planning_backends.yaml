@@ -1,0 +1,16 @@
+grasp_planner:
+  active: mock
+  params: {}
+
+ik_solver:
+  active: mock
+  params: {}
+
+collision_checker:
+  active: mock
+  params: {}
+
+motion_planner:
+  active: simple
+  params:
+    num_interpolation_points: 20

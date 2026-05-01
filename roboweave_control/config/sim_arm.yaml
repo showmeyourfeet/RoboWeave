@@ -1,0 +1,23 @@
+robot_id: "roboweave_sim"
+robot_name: "RoboWeave Simulator"
+arms:
+  - arm_id: "left_arm"
+    name: "Left Arm"
+    num_joints: 7
+    joint_names: ["j1", "j2", "j3", "j4", "j5", "j6", "j7"]
+    joint_limits_lower: [-3.14, -2.09, -3.14, -2.09, -3.14, -2.09, -3.14]
+    joint_limits_upper: [3.14, 2.09, 3.14, 2.09, 3.14, 2.09, 3.14]
+    max_joint_velocities: [2.0, 2.0, 2.0, 2.0, 2.5, 2.5, 2.5]
+    max_joint_efforts: [87.0, 87.0, 87.0, 87.0, 12.0, 12.0, 12.0]
+    eef_link: "left_arm_eef_link"
+    base_link: "left_arm_base_link"
+    driver_type: "sim"
+grippers:
+  - gripper_id: "left_gripper"
+    name: "Left Gripper"
+    type: "parallel"
+    attached_to_arm: "left_arm"
+    min_width: 0.0
+    max_width: 0.08
+    max_force: 20.0
+    driver_type: "sim"

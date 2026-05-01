@@ -1,0 +1,4 @@
+skills:
+  - skill_name: "fold_cloth"
+    module_path: "roboweave_vla.skills.fold_cloth"
+    class_name: "MockFoldClothSkill"

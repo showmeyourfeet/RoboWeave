@@ -1,0 +1,6 @@
+roboweave_runtime:
+  ros__parameters:
+    publish_hz: 1.0
+    tick_hz: 10.0
+    ttl_check_hz: 1.0
+    node_name: roboweave_runtime

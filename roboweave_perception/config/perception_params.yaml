@@ -1,0 +1,9 @@
+perception:
+  # Default confidence threshold for detection
+  default_confidence_threshold: 0.5
+  # Default tracking frequency in Hz
+  default_tracking_frequency_hz: 10.0
+  # Max consecutive missed frames before tracking is lost
+  max_missed_frames: 5
+  # Minimum pose estimation confidence threshold
+  min_pose_confidence: 0.1

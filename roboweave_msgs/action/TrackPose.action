@@ -1,0 +1,23 @@
+# Goal
+# Object ID to track
+string object_id
+# Camera identifier
+string camera_id
+# Tracking update frequency in Hz
+float64 tracking_frequency_hz
+---
+# Result
+# Final tracking status: "completed" | "lost" | "cancelled"
+string final_status
+# Error code if tracking failed (e.g. "PER_TRACKING_LOST")
+string error_code
+# Human-readable message
+string message
+---
+# Feedback
+# Current estimated pose with header
+geometry_msgs/PoseStamped current_pose
+# Tracking confidence [0.0, 1.0]
+float64 confidence
+# Time since tracking started in seconds
+float64 tracking_age_sec

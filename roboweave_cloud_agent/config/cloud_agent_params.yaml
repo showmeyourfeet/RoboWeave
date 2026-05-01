@@ -1,0 +1,67 @@
+server:
+  host: "0.0.0.0"
+  port: 50051
+  shutdown_timeout_sec: 5
+
+task_templates:
+  - pattern: "pick up"
+    regex: "pick up (?P<object>.+)"
+    nodes:
+      - skill_name: "detect_object"
+        node_type: "skill"
+        depends_on: []
+        inputs: { target: "{object}" }
+      - skill_name: "plan_grasp"
+        node_type: "skill"
+        depends_on: ["detect_object"]
+        inputs: {}
+      - skill_name: "plan_motion"
+        node_type: "skill"
+        depends_on: ["plan_grasp"]
+        inputs: {}
+      - skill_name: "execute_grasp"
+        node_type: "skill"
+        depends_on: ["plan_motion"]
+        inputs: {}
+
+  - pattern: "place"
+    regex: "place (?P<object>.+) on (?P<surface>.+)"
+    nodes:
+      - skill_name: "plan_motion"
+        node_type: "skill"
+        depends_on: []
+        inputs: { target: "{surface}" }
+      - skill_name: "open_gripper"
+        node_type: "skill"
+        depends_on: ["plan_motion"]
+        inputs: {}
+      - skill_name: "retract"
+        node_type: "skill"
+        depends_on: ["open_gripper"]
+        inputs: {}
+
+skill_descriptors:
+  - name: "detect_object"
+    category: "perception"
+    description: "Detect and localize a target object in the scene"
+    version: "0.1.0"
+  - name: "plan_grasp"
+    category: "planning"
+    description: "Plan a grasp pose for a detected object"
+    version: "0.1.0"
+  - name: "plan_motion"
+    category: "planning"
+    description: "Plan a collision-free motion trajectory"
+    version: "0.1.0"
+  - name: "execute_grasp"
+    category: "control"
+    description: "Execute a grasp by closing the gripper"
+    version: "0.1.0"
+  - name: "open_gripper"
+    category: "control"
+    description: "Open the gripper to release an object"
+    version: "0.1.0"
+  - name: "retract"
+    category: "control"
+    description: "Retract the arm to a safe position after placing"
+    version: "0.1.0"

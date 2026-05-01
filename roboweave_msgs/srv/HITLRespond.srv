@@ -1,0 +1,7 @@
+# HITLResponse serialized as JSON (JsonEnvelope format)
+string response_json
+---
+# Whether the response was accepted
+bool accepted
+# Human-readable message
+string message

@@ -1,0 +1,31 @@
+# Goal
+# Unique skill call identifier
+string skill_call_id
+# Skill name to invoke
+string skill_name
+# Associated task identifier
+string task_id
+# Skill inputs as JSON (JsonEnvelope format)
+string inputs_json
+# Skill constraints as JSON (JsonEnvelope format)
+string constraints_json
+# Timeout in milliseconds (0 = use skill default)
+int32 timeout_ms
+---
+# Result
+# Execution status: "success" | "failed" | "timeout" | "cancelled" | "interrupted" | "safety_stop"
+string status
+# Skill outputs as JSON (JsonEnvelope format)
+string outputs_json
+# Failure code if not successful
+string failure_code
+# Human-readable failure message
+string failure_message
+---
+# Feedback
+# Current execution phase: "precondition_check" | "executing" | "postcondition_check"
+string phase
+# Execution progress [0.0, 1.0]
+float64 progress
+# Human-readable status message
+string status_message
