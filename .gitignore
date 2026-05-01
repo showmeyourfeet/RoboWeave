@@ -41,3 +41,5 @@ htmlcov/
 
 # Docs (confidential)
 docs/
+
+.kiro/
