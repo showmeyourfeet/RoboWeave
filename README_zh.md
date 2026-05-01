@@ -48,4 +48,4 @@ bash tools/scripts/run_tests.sh
 
 ## 许可证
 
-Apache-2.0
+[Apache-2.0](LICENSE)
